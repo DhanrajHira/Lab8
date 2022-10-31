@@ -72,4 +72,19 @@ public class CustomListTest {
             cityList.deleteCity(otherCity);
         });
     }
+
+    @Test
+    void testCountCities() {
+        CustomList cityList = mockEmptyCityList();
+        City city = mockCity();
+        assertEquals(0, cityList.getCityCount());
+        cityList.addCity(city);
+        assertEquals(1, cityList.getCityCount());
+        cityList.deleteCity(city);
+        assertEquals(0, cityList.getCityCount());
+        City otherCity = new City("Charleston", "PEI");
+        cityList.addCity(city);
+        cityList.addCity(otherCity);
+        assertEquals(2, cityList.getCityCount());
+    }
 }
