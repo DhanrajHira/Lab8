@@ -46,12 +46,12 @@ public class CustomListTest {
 
     @Test
     void testHasCity() {
-        CustomList cityList = mockEmptyCityList();
+        list = mockEmptyCityList();
         City city = mockCity();
-        Assertions.assertFalse(cityList.hasCity(city));
-        cityList.add(city);
-        Assertions.assertTrue(cityList.hasCity(city));
+        Assertions.assertFalse(list.hasCity(city));
+        list.addCity(city);
+        Assertions.assertTrue(list.hasCity(city));
         City otherCity = new City("Charleston", "PEI");
-        Assertions.assertFalse(cityList.hasCity(otherCity));
+        Assertions.assertFalse(list.hasCity(otherCity));
     }
 }

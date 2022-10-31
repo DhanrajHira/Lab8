@@ -52,6 +52,17 @@ public class CustomList extends ArrayAdapter<City> {
     public int getCount(){
         return cities.size();
     }
+
+    /**
+     * Checks if a city is already in the city list.
+     * @param city The city to be checked.
+     * @return true if the city is already in the list, false otherwise.
+     */
+    public boolean hasCity(City city) {
+        return cities.contains(city);
+    }
+
+
     /**
      * this adds a city object to the list
      *for the first phase it will be empty
