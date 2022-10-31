@@ -53,6 +53,14 @@ public class CustomList extends ArrayAdapter<City> {
         return cities.size();
     }
 
+
+    /** Returns the number of cities in the list.
+     * @return The number of cities in the list.
+     */
+    public int getCityCount() {
+        return cities.size();
+    }
+
     /**
      * Checks if a city is already in the city list.
      * @param city The city to be checked.
